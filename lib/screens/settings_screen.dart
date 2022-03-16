@@ -9,11 +9,51 @@ class SettingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SettingScreen'),
+        title: const Text('Settings'),
       ),
       drawer: const SideMenu(),
-      body: const Center(
-        child: Text('SettingScreen'),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            const Text(
+              'Ajustes',
+              style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+            ),
+            const Divider(),
+            SwitchListTile.adaptive(
+              title: const Text('Dark Mode'),
+              value: true,
+              onChanged: (value) {},
+            ),
+            const Divider(),
+            RadioListTile<int>(
+              title: const Text('Masculino'),
+              value: 1,
+              groupValue: 1,
+              onChanged: (value) {},
+            ),
+            const Divider(),
+            RadioListTile<int>(
+              title: const Text('Femenino'),
+              value: 2,
+              groupValue: 1,
+              onChanged: (value) {},
+            ),
+            const Divider(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Nombre',
+                  helperText: 'Ingrese su nombre',
+                ),
+                initialValue: 'Manuel Duarte',
+                onChanged: (value) {},
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
