@@ -13,9 +13,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (context) => const HomeScreen(),
         SettingScreen.routeName: (context) => const SettingScreen(),
       },
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
+      theme: ThemeData.dark(),
     );
   }
 }
