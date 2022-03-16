@@ -19,13 +19,6 @@ class SideMenu extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Theme'),
-            leading: const Icon(Icons.color_lens),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
             title: const Text('Setting'),
             leading: const Icon(Icons.settings),
             onTap: () {
