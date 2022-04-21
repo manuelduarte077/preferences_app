@@ -49,3 +49,4 @@ app.*.map.json
 # Platform specific
 macos/
 linux/
+windows/
